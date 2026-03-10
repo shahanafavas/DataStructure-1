@@ -25,8 +25,9 @@ namespace ConsoleApp6
             practice.insertAtEnd(30);
             practice.Insertatspecific(32, 3);
             practice.disply();
-            practice.kthelement(3);
-            practice.findmiddle();
+            //practice.kthelement(3);
+            //practice.findmiddle();
+            practice.reverseLL();
         }
 
 

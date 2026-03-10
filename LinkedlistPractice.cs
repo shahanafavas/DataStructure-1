@@ -147,5 +147,28 @@ namespace DataStructure_1
             }
             Console.WriteLine(slow.data);
         }
+
+        public void reverseLL()
+        {
+            Node prev = null;
+            Node current = head;
+            Node next = null;
+
+            while(current!=null)
+            {
+                next = current.next;
+                current.next = prev;
+                prev = current;
+                current = next;
+            }
+            head = prev;
+
+            Node temp = head;
+            while(temp!=null)
+            {
+                Console.WriteLine(temp.data);
+                temp = temp.next;
+            }
+        }
     }
 }
