@@ -13,7 +13,10 @@ namespace ConsoleApp6
             //obj.secondLargest();
             //obj.Kthlargets();
 
-
+            //string
+            StringWorkouts works = new StringWorkouts();
+            string result=works.reverse("shahanas");
+            Console.WriteLine(result);
 
             //singly linkedlist
 
@@ -28,6 +31,9 @@ namespace ConsoleApp6
             //practice.kthelement(3);
             //practice.findmiddle();
             practice.reverseLL();
+
+            int[] arr = { 3, 4, 5, 6, 7, 8 };
+            practice.ArraytoLL(arr);
         }
 
 

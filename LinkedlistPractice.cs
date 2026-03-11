@@ -170,5 +170,48 @@ namespace DataStructure_1
                 temp = temp.next;
             }
         }
+
+        public void RemoveDuplicates()
+        {
+            Node temp = head;
+
+            while (temp != null && temp.next != null)
+            {
+                if (temp.data == temp.next.data)
+                {
+                    temp.next = temp.next.next;
+                }
+                else
+                {
+                    temp = temp.next;
+                }
+            }
+        }
+
+        public void ArraytoLL(int[]arr)
+        {
+            Node head = null;
+            Node tail = null;
+            foreach(var num in arr)
+            {
+                Node newnode = new Node(num);
+                if(head==null)
+                {
+                    head = newnode;
+                    tail = newnode;
+                }
+                else
+                {
+                    tail.next = newnode;
+                    tail = newnode;
+                }
+            }
+            Node temp = head;
+            while(temp!=null)
+            {
+                Console.WriteLine(temp.data);
+                temp = temp.next;
+            }
+        }
     }
 }
