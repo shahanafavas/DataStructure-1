@@ -13,15 +13,24 @@ namespace ConsoleApp6
             //obj.secondLargest();
             //obj.Kthlargets();
 
-            //string
+
+
+            //StringWorkouts
             StringWorkouts works = new StringWorkouts();
             string result=works.reverse("shahanas");
             Console.WriteLine(result);
+            int[] arr = { 1, 2, 3, 4, 5 };
+            int n = arr.Length;
+            int results = works.sumrecursion(arr, n);
+            //Console.WriteLine("after recursion:"+results);
+            works.secondLongest("hello friends how are you");
+
 
             //singly linkedlist
 
             LinkedlistPractice practice = new LinkedlistPractice();
             practice.addNode(12);
+            practice.addNode(20);
             practice.addNode(15);
             
             practice.insertAtBegning(20);
@@ -30,10 +39,39 @@ namespace ConsoleApp6
             practice.disply();
             //practice.kthelement(3);
             //practice.findmiddle();
-            practice.reverseLL();
+            //practice.reverseLL();
+            practice.sortLL();
+            practice.disply();
+            practice.RemoveDuplicates();
+            practice.disply();
+            //int[] arr = { 3, 4, 5, 6, 7, 8 };
+            //practice.ArraytoLL(arr);
 
-            int[] arr = { 3, 4, 5, 6, 7, 8 };
-            practice.ArraytoLL(arr);
+
+
+
+            //doubly linked list
+
+            DoubleLinkedList linkedList = new DoubleLinkedList();
+            linkedList.Addnode(1);
+            linkedList.Addnode(2);
+            linkedList.Addnode(3);
+            linkedList.Addnode(4);
+            linkedList.display();
+            linkedList.displayReverse();
+            linkedList.delete(2);
+            linkedList.display();
+            linkedList.Findmiddle();
+
+
+
+
+            //Binarysearch
+            BinarySearch search = new BinarySearch();
+            int[] array = { 1, 2, 3, 4, 5,5,5 };
+            int target = 5;
+            search.Findfirstoccurence(array, target);
+            //Console.WriteLine("target:"+Seresult);
         }
 
 

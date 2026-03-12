@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -173,6 +174,7 @@ namespace DataStructure_1
 
         public void RemoveDuplicates()
         {
+            Console.WriteLine("remove duplicate:");
             Node temp = head;
 
             while (temp != null && temp.next != null)
@@ -211,7 +213,28 @@ namespace DataStructure_1
             {
                 Console.WriteLine(temp.data);
                 temp = temp.next;
+            }  
+        }
+
+
+        public void sortLL()
+        {
+            Console.WriteLine("after sorting:");
+            Node current;
+            Node index;
+            for(current=head;current!=null;current=current.next)
+            {
+                for(index=current.next;index!=null;index=index.next)
+                {
+                    if(current.data>index.data)
+                    {
+                        int temp = current.data;
+                        current.data = index.data;
+                        index.data = temp;
+                    }
+                }
             }
+
         }
     }
 }
